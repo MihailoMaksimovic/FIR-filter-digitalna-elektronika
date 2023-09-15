@@ -1,0 +1,298 @@
+** sch_path: /home/mihailo/projekat_sky130/projekat_layout/fir/FIR.sch
+**.subckt FIR C0 C1 C2 C3 C4 C5 C6 C7 VP VN D D_N Z0 Z1 Z2 Z3 Z4 Z5 Z6 Z7 B0 B1 B2 B3 B4 B5 B6 B7 A0
+*+ A1 A2 A3 A4 A5 A6 A7
+*.ipin C0
+*.ipin C1
+*.ipin C2
+*.ipin C3
+*.ipin C4
+*.ipin C5
+*.ipin C6
+*.ipin C7
+*.iopin VP
+*.iopin VN
+*.ipin D
+*.ipin D_N
+*.opin Z0
+*.opin Z1
+*.opin Z2
+*.opin Z3
+*.opin Z4
+*.opin Z5
+*.opin Z6
+*.opin Z7
+*.ipin B0
+*.ipin B1
+*.ipin B2
+*.ipin B3
+*.ipin B4
+*.ipin B5
+*.ipin B6
+*.ipin B7
+*.ipin A0
+*.ipin A1
+*.ipin A2
+*.ipin A3
+*.ipin A4
+*.ipin A5
+*.ipin A6
+*.ipin A7
+x1 C0 net41 net42 C1 net43 C2 C3 net44 net45 C4 C5 net46 net47 C6 net48 C7 D D_N VP VN SHIFTER
+x2 net41 net7 net6 net42 net5 net43 net44 net4 net3 net45 net46 net2 net1 net47 net31 net48 D D_N VP
++ VN SHIFTER
+x3 net7 net8 net9 net6 net10 net5 net4 net11 net12 net3 net2 net13 net14 net1 net15 net31 D D_N VP
++ VN SHIFTER
+x4 net8 net16 net17 net9 net18 net10 net11 net19 net20 net12 net13 net21 net22 net14 net40 net15 D
++ D_N VP VN SHIFTER
+x5 net16 net32 net33 net17 net34 net18 net19 net35 net36 net20 net21 net37 net38 net22 net39 net40 D
++ D_N VP VN SHIFTER
+x6 net32 net23 net24 net33 net25 net34 net35 net26 net27 net36 net37 net28 net29 net38 net30 net39 D
++ D_N VP VN SHIFTER
+x7 net16 net17 net18 net19 net20 net21 net22 net40 net23 net24 net25 net26 net27 net28 net29 net30
++ net49 net50 net51 net52 net53 net56 net54 net55 net201 VN VP VN FA_8bits
+x8 net41 net42 net43 net44 net45 net46 net47 net48 net49 net50 net51 net52 net53 net56 net54 net55
++ net169 net170 net172 net171 net173 net174 net175 net176 net202 VN VP VN FA_8bits
+x9 B0 net97 net98 B1 net99 B2 B3 net100 net101 B4 B5 net102 net103 B6 net104 B7 D D_N VP VN SHIFTER
+x10 net97 net63 net62 net98 net61 net99 net100 net60 net59 net101 net102 net58 net57 net103 net87
++ net104 D D_N VP VN SHIFTER
+x11 net63 net64 net65 net62 net66 net61 net60 net67 net68 net59 net58 net69 net70 net57 net71 net87
++ D D_N VP VN SHIFTER
+x12 net64 net72 net73 net65 net74 net66 net67 net75 net76 net68 net69 net77 net78 net70 net96 net71
++ D D_N VP VN SHIFTER
+x13 net72 net88 net89 net73 net90 net74 net75 net91 net92 net76 net77 net93 net94 net78 net95 net96
++ D D_N VP VN SHIFTER
+x14 net88 net79 net80 net89 net81 net90 net91 net82 net83 net92 net93 net84 net85 net94 net86 net95
++ D D_N VP VN SHIFTER
+x15 net88 net89 net90 net91 net92 net93 net94 net95 net79 net80 net81 net82 net83 net84 net85 net86
++ net105 net106 net107 net108 net109 net112 net110 net111 net203 VN VP VN FA_8bits
+x16 net63 net62 net61 net60 net59 net58 net57 net87 net105 net106 net107 net108 net109 net112 net110
++ net111 net177 net178 net179 net180 net181 net182 net183 net184 net204 VN VP VN FA_8bits
+x17 A0 net153 net154 A1 net155 A2 A3 net156 net157 A4 A5 net158 net159 A6 net160 A7 D D_N VP VN
++ SHIFTER
+x18 net153 net119 net118 net154 net117 net155 net156 net116 net115 net157 net158 net114 net113
++ net159 net143 net160 D D_N VP VN SHIFTER
+x19 net119 net120 net121 net118 net122 net117 net116 net123 net124 net115 net114 net125 net126
++ net113 net127 net143 D D_N VP VN SHIFTER
+x20 net120 net128 net129 net121 net130 net122 net123 net131 net132 net124 net125 net133 net134
++ net126 net152 net127 D D_N VP VN SHIFTER
+x21 net128 net144 net145 net129 net146 net130 net131 net147 net148 net132 net133 net149 net150
++ net134 net151 net152 D D_N VP VN SHIFTER
+x22 net144 net135 net136 net145 net137 net146 net147 net138 net139 net148 net149 net140 net141
++ net150 net142 net151 D D_N VP VN SHIFTER
+x23 net144 net145 net146 net147 net148 net149 net150 net151 net135 net136 net137 net138 net139
++ net140 net141 net142 net161 net162 net163 net164 net165 net168 net166 net167 net205 VN VP VN FA_8bits
+x24 net119 net118 net117 net116 net115 net114 net113 net143 net161 net162 net163 net164 net165
++ net168 net166 net167 net193 net194 net195 net196 net197 net198 net199 net200 net206 VN VP VN FA_8bits
+x25 net177 net178 net179 net180 net181 net182 net183 net184 net169 net170 net172 net171 net173
++ net174 net175 net176 net185 net186 net187 net188 net189 net190 net191 net192 net207 VN VP VN FA_8bits
+x26 net193 net194 net195 net196 net197 net198 net199 net200 net185 net186 net187 net188 net189
++ net190 net191 net192 Z0 Z1 Z2 Z3 Z4 Z5 Z6 Z7 net208 VN VP VN FA_8bits
+**.ends
+
+* expanding   symbol:  /home/mihailo/projekat_sky130/projekat_layout/shifter/SHIFTER.sym # of
+*+ pins=20
+** sym_path: /home/mihailo/projekat_sky130/projekat_layout/shifter/SHIFTER.sym
+** sch_path: /home/mihailo/projekat_sky130/projekat_layout/shifter/SHIFTER.sch
+.subckt SHIFTER X0 Y0 Y1 X1 Y2 X2 X3 Y3 Y4 X4 X5 Y5 Y6 X6 Y7 X7 D D_N VP VN
+*.iopin VP
+*.iopin VN
+*.ipin X0
+*.ipin X1
+*.ipin X2
+*.ipin X3
+*.ipin X4
+*.ipin X5
+*.ipin X6
+*.ipin X7
+*.ipin D
+*.ipin D_N
+*.opin Y0
+*.opin Y1
+*.opin Y2
+*.opin Y3
+*.opin Y4
+*.opin Y5
+*.opin Y6
+*.opin Y7
+X1 X0 D net1 VP VN AND
+X3 D_N X1 Y0 VP VN AND
+X4 X1 D net2 VP VN AND
+X5 D_N X2 net3 VP VN AND
+X6 X2 D net4 VP VN AND
+X7 D_N X3 net5 VP VN AND
+X8 X3 D net6 VP VN AND
+X9 D_N X4 net7 VP VN AND
+X10 X4 D net8 VP VN AND
+X11 D_N X5 net9 VP VN AND
+X12 X5 D net10 VP VN AND
+X13 D_N X6 net11 VP VN AND
+X14 X6 D Y7 VP VN AND
+X15 D_N X7 net12 VP VN AND
+X2 net1 net3 Y1 VP VN OR
+X16 net2 net5 Y2 VP VN OR
+X17 net4 net7 Y3 VP VN OR
+X18 net6 net9 Y4 VP VN OR
+X19 net8 net11 Y5 VP VN OR
+X20 net10 net12 Y6 VP VN OR
+.ends
+
+
+* expanding   symbol:  /home/mihailo/projekat_sky130/projekat_layout/fa_8bits/FA_8bits.sym # of
+*+ pins=28
+** sym_path: /home/mihailo/projekat_sky130/projekat_layout/fa_8bits/FA_8bits.sym
+** sch_path: /home/mihailo/projekat_sky130/projekat_layout/fa_8bits/FA_8bits.sch
+.subckt FA_8bits B0 B1 B2 B3 B4 B5 B6 B7 A0 A1 A2 A3 A4 A5 A6 A7 S0 S1 S2 S3 S4 S5 S6 S7 S8
++ Cin_first VP VN
+*.ipin A0
+*.ipin B0
+*.ipin A1
+*.ipin B1
+*.opin S0
+*.opin S1
+*.iopin VP
+*.iopin VN
+*.ipin Cin_first
+*.ipin A2
+*.ipin B2
+*.opin S2
+*.ipin A3
+*.ipin B3
+*.opin S3
+*.ipin A4
+*.ipin B4
+*.opin S4
+*.ipin A5
+*.ipin B5
+*.opin S5
+*.ipin A6
+*.ipin B6
+*.opin S6
+*.opin S7
+*.ipin A7
+*.ipin B7
+*.opin S8
+X1 A0 B0 Cin_first net1 S0 VP VN FA
+X2 A1 B1 net1 net2 S1 VP VN FA
+X3 A2 B2 net2 net3 S2 VP VN FA
+X4 A3 B3 net3 net4 S3 VP VN FA
+X5 A4 B4 net4 net5 S4 VP VN FA
+X6 A5 B5 net5 net6 S5 VP VN FA
+X7 A6 B6 net6 net7 S6 VP VN FA
+X8 A7 B7 net7 S8 S7 VP VN FA
+.ends
+
+
+* expanding   symbol:  /home/mihailo/projekat_sky130/projekat_layout/and/AND.sym # of pins=5
+** sym_path: /home/mihailo/projekat_sky130/projekat_layout/and/AND.sym
+** sch_path: /home/mihailo/projekat_sky130/projekat_layout/and/AND.sch
+.subckt AND A B X VP VN
+*.ipin A
+*.ipin B
+*.iopin VN
+*.iopin VP
+*.opin X
+XM1 net1 A net2 VN sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net1 A VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 net1 B VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net2 B VN VN sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM5 X net1 VN VN sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM6 X net1 VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  /home/mihailo/projekat_sky130/projekat_layout/or/OR.sym # of pins=5
+** sym_path: /home/mihailo/projekat_sky130/projekat_layout/or/OR.sym
+** sch_path: /home/mihailo/projekat_sky130/projekat_layout/or/OR.sch
+.subckt OR A B X VP VN
+*.opin X
+*.ipin A
+*.ipin B
+*.iopin VP
+*.iopin VN
+XM1 net2 A VN VN sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net1 A VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM3 net2 B net1 VP sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM4 net2 B VN VN sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM5 X net2 VN VN sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM6 X net2 VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  /home/mihailo/projekat_sky130/projekat_layout/fa/FA.sym # of pins=7
+** sym_path: /home/mihailo/projekat_sky130/projekat_layout/fa/FA.sym
+** sch_path: /home/mihailo/projekat_sky130/projekat_layout/fa/FA.sch
+.subckt FA A B Cin Out Sum VP VN
+*.ipin A
+*.opin Sum
+*.iopin VP
+*.iopin VN
+*.opin Out
+*.ipin B
+*.ipin Cin
+X4 A B VN VP net1 XOR
+X5 Cin net1 VN VP Sum XOR
+X1 Cin net1 net3 VP VN AND
+X2 A B net2 VP VN AND
+X3 net3 net2 Out VP VN OR
+.ends
+
+
+* expanding   symbol:  /home/mihailo/projekat_sky130/projekat_layout/xor/XOR.sym # of pins=5
+** sym_path: /home/mihailo/projekat_sky130/projekat_layout/xor/XOR.sym
+** sch_path: /home/mihailo/projekat_sky130/projekat_layout/xor/XOR.sch
+.subckt XOR A B VN VP X
+*.ipin A
+*.ipin B
+*.opin X
+*.iopin VN
+*.iopin VP
+X1 B net3 net1 VP VN AND
+X2 net4 A net2 VP VN AND
+X3 net1 net2 X VP VN OR
+X4 A net3 VP VN invertor
+X5 B net4 VP VN invertor
+.ends
+
+
+* expanding   symbol:  /home/mihailo/projekat_sky130/projekat_layout/invertor/invertor.sym # of
+*+ pins=4
+** sym_path: /home/mihailo/projekat_sky130/projekat_layout/invertor/invertor.sym
+** sch_path: /home/mihailo/projekat_sky130/projekat_layout/invertor/invertor.sch
+.subckt invertor A Y VP VN
+*.iopin VP
+*.iopin VN
+*.ipin A
+*.opin Y
+XM1 Y A VN VN sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+XM2 Y A VP VP sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
++ pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W'
++ sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.end

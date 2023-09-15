@@ -1,0 +1,10 @@
+* NGSPICE file created from nor.ext - technology: sky130A
+
+**.subckt nor
+X0 VN B a_15_n300# VN sky130_fd_pr__nfet_01v8 ad=1e+12p pd=6e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X1 a_15_n5# A VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X2 a_15_n300# A VN VN sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X3 a_15_n300# B a_15_n5# VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+**.ends
+
+.end

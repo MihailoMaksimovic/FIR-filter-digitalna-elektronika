@@ -1,0 +1,52 @@
+* NGSPICE file created from fa_8bit.ext - technology: sky130A
+
+.subckt or A B X VP VN
+X0 VN B a_15_n300# VN sky130_fd_pr__nfet_01v8 ad=1.5e+12p pd=9e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X1 X a_15_n300# VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=1e+12p ps=6e+06u w=1e+06u l=150000u
+X2 a_15_n5# A VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+X3 a_15_n300# A VN VN sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X4 X a_15_n300# VN VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+X5 a_15_n300# B a_15_n5# VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+.ends
+
+.subckt invertor A Y VP VN
+X0 Y A VN VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X1 Y A VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+.ends
+
+.subckt and A B X VP VN
+X0 a_15_n5# B a_15_n300# VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X1 X a_15_n5# VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=1.5e+12p ps=9e+06u w=1e+06u l=150000u
+X2 a_15_n5# A VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+X3 a_15_n300# A VN VN sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=1e+12p ps=6e+06u w=1e+06u l=150000u
+X4 X a_15_n5# VN VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+X5 VP B a_15_n5# VP sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+.ends
+
+.subckt xor_ and_1/B or_0/VP SUB and_0/A or_0/X
+Xor_0 or_0/A or_0/B or_0/X or_0/VP SUB or
+Xinvertor_0 and_0/A and_1/A or_0/VP SUB invertor
+Xinvertor_1 and_1/B and_0/B or_0/VP SUB invertor
+Xand_0 and_0/A and_0/B or_0/B or_0/VP SUB and
+Xand_1 and_1/A and_1/B or_0/A or_0/VP SUB and
+.ends
+
+.subckt fa xor__1/or_0/X and_0/B or_0/VP SUB or_0/X
+Xor_0 or_0/A or_0/B or_0/X or_0/VP SUB or
+Xxor__0 and_1/A or_0/VP SUB and_1/B and_0/A xor_
+Xxor__1 and_0/A or_0/VP SUB and_0/B xor__1/or_0/X xor_
+Xand_0 and_0/A and_0/B or_0/A or_0/VP SUB and
+Xand_1 and_1/A and_1/B or_0/B or_0/VP SUB and
+.ends
+
+**.subckt fa_8bit
+Xfa_0 fa_0/xor__1/or_0/X fa_0/and_0/B fa_7/or_0/VP SUB fa_0/or_0/X fa
+Xfa_1 fa_1/xor__1/or_0/X fa_0/or_0/X fa_7/or_0/VP SUB fa_1/or_0/X fa
+Xfa_2 fa_2/xor__1/or_0/X fa_1/or_0/X fa_7/or_0/VP SUB fa_2/or_0/X fa
+Xfa_3 fa_3/xor__1/or_0/X fa_2/or_0/X fa_7/or_0/VP SUB fa_3/or_0/X fa
+Xfa_4 fa_4/xor__1/or_0/X fa_3/or_0/X fa_7/or_0/VP SUB fa_4/or_0/X fa
+Xfa_5 fa_5/xor__1/or_0/X fa_4/or_0/X fa_7/or_0/VP SUB fa_5/or_0/X fa
+Xfa_6 fa_6/xor__1/or_0/X fa_5/or_0/X fa_7/or_0/VP SUB fa_6/or_0/X fa
+Xfa_7 fa_7/xor__1/or_0/X fa_6/or_0/X fa_7/or_0/VP SUB fa_7/or_0/X fa
+.ends
+

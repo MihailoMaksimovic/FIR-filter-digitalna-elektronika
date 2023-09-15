@@ -1,0 +1,107 @@
+magic
+tech sky130A
+timestamp 1693670599
+<< nwell >>
+rect -275 485 85 580
+rect -275 430 410 485
+rect -275 405 500 430
+rect -275 305 65 405
+rect -275 285 115 305
+rect 385 290 500 405
+<< poly >>
+rect -65 800 -25 810
+rect -65 780 -55 800
+rect -35 780 -25 800
+rect -65 770 -25 780
+rect -65 310 -50 770
+rect -10 690 30 700
+rect -10 670 0 690
+rect 20 670 30 690
+rect -10 660 30 670
+rect -75 300 -35 310
+rect -75 280 -65 300
+rect -45 280 -35 300
+rect -75 270 -35 280
+rect -10 155 5 660
+rect -20 140 5 155
+rect -20 95 -5 140
+rect -45 85 -5 95
+rect -45 65 -35 85
+rect -15 65 -5 85
+rect -45 55 -5 65
+<< polycont >>
+rect -55 780 -35 800
+rect 0 670 20 690
+rect -65 280 -45 300
+rect -35 65 -15 85
+<< locali >>
+rect -65 800 -25 810
+rect -65 790 -55 800
+rect -160 780 -55 790
+rect -35 780 -25 800
+rect -160 770 -25 780
+rect -75 730 -45 750
+rect -65 605 -45 730
+rect -10 690 30 700
+rect -10 670 0 690
+rect 20 670 30 690
+rect -10 660 30 670
+rect -65 585 15 605
+rect 410 585 470 605
+rect -75 300 -35 310
+rect -75 280 -65 300
+rect -45 290 -35 300
+rect 450 290 470 585
+rect -45 280 5 290
+rect -75 270 5 280
+rect 410 215 430 290
+rect 450 270 505 290
+rect -70 195 15 215
+rect 410 195 475 215
+rect -70 115 -50 195
+rect -160 85 -5 95
+rect -160 75 -35 85
+rect -45 65 -35 75
+rect -15 65 -5 85
+rect -45 55 -5 65
+<< metal1 >>
+rect -205 810 -5 860
+rect -205 705 -160 810
+rect -70 465 10 555
+rect -70 310 5 400
+rect 405 310 490 410
+rect -205 65 -160 165
+rect -205 15 5 65
+rect 400 15 475 115
+<< via1 >>
+rect -250 625 -210 705
+rect -250 160 -210 240
+<< metal2 >>
+rect -255 705 -155 715
+rect -255 625 -250 705
+rect -210 625 -155 705
+rect -255 240 -155 625
+rect -255 160 -250 240
+rect -210 160 -155 240
+rect -255 150 -155 160
+use and  and_0
+timestamp 1693223098
+transform 1 0 115 0 1 315
+box -120 -315 295 115
+use and  and_1
+timestamp 1693223098
+transform 1 0 115 0 -1 560
+box -120 -315 295 115
+use invertor  invertor_0
+timestamp 1692778847
+transform 1 0 -140 0 -1 755
+box -135 -15 70 315
+use invertor  invertor_1
+timestamp 1692778847
+transform 1 0 -140 0 1 110
+box -135 -15 70 315
+use or  or_0
+timestamp 1693223168
+transform 1 0 590 0 1 315
+box -120 -315 295 115
+<< end >>

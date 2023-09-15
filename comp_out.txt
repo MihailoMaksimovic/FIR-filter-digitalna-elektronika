@@ -1,0 +1,172 @@
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Subcircuit summary:
+Circuit 1: or                              |Circuit 2: OR                              
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (3)                |sky130_fd_pr__nfet_01v8 (3)                
+sky130_fd_pr__pfet_01v8 (3)                |sky130_fd_pr__pfet_01v8 (3)                
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: or                              |Circuit 2: OR                              
+-------------------------------------------|-------------------------------------------
+VP                                         |VP                                         
+A                                          |A                                          
+B                                          |B                                          
+X                                          |X                                          
+VN                                         |VN                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes or and OR are equivalent.
+
+Subcircuit summary:
+Circuit 1: invertor                        |Circuit 2: invertor                        
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+sky130_fd_pr__pfet_01v8 (1)                |sky130_fd_pr__pfet_01v8 (1)                
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 4                          |Number of nets: 4                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: invertor                        |Circuit 2: invertor                        
+-------------------------------------------|-------------------------------------------
+Y                                          |Y                                          
+A                                          |A                                          
+VN                                         |VN                                         
+VP                                         |VP                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes invertor and invertor are equivalent.
+
+Subcircuit summary:
+Circuit 1: and                             |Circuit 2: AND                             
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (3)                |sky130_fd_pr__nfet_01v8 (3)                
+sky130_fd_pr__pfet_01v8 (3)                |sky130_fd_pr__pfet_01v8 (3)                
+Number of devices: 6                       |Number of devices: 6                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: and                             |Circuit 2: AND                             
+-------------------------------------------|-------------------------------------------
+VP                                         |VP                                         
+A                                          |B **Mismatch**                             
+B                                          |A **Mismatch**                             
+X                                          |X                                          
+VN                                         |VN                                         
+---------------------------------------------------------------------------------------
+Cell pin lists for and and AND altered to match.
+Device classes and and AND are equivalent.
+Flattening unmatched subcell xor_ in circuit fa (0)(2 instances)
+Flattening unmatched subcell XOR in circuit FA (1)(2 instances)
+
+Subcircuit summary:
+Circuit 1: fa                              |Circuit 2: FA                              
+-------------------------------------------|-------------------------------------------
+or (3)                                     |OR (3)                                     
+invertor (4)                               |invertor (4)                               
+and (6)                                    |AND (6)                                    
+Number of devices: 13                      |Number of devices: 13                      
+Number of nets: 18                         |Number of nets: 18                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: fa                              |Circuit 2: FA                              
+-------------------------------------------|-------------------------------------------
+and_1/B                                    |A **Mismatch**                             
+and_1/A                                    |B **Mismatch**                             
+and_0/B                                    |Cin **Mismatch**                           
+SUB                                        |VN **Mismatch**                            
+or_0/VP                                    |VP **Mismatch**                            
+xor__1/or_0/X                              |Sum **Mismatch**                           
+or_0/X                                     |Out **Mismatch**                           
+---------------------------------------------------------------------------------------
+Cell pin lists for fa and FA altered to match.
+Device classes fa and FA are equivalent.
+
+Flattening instances of or in cell shifter (0) makes a better match
+Flattening instances of OR in cell SHIFTER (1) makes a better match
+Making another compare attempt.
+
+Subcircuit summary:
+Circuit 1: shifter                         |Circuit 2: SHIFTER                         
+-------------------------------------------|-------------------------------------------
+and (14)                                   |AND (14)                                   
+sky130_fd_pr__nfet_01v8 (18)               |sky130_fd_pr__nfet_01v8 (18)               
+sky130_fd_pr__pfet_01v8 (18)               |sky130_fd_pr__pfet_01v8 (18)               
+Number of devices: 50                      |Number of devices: 50                      
+Number of nets: 44                         |Number of nets: 44                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely with port errors.
+
+Subcircuit pins:
+Circuit 1: shifter                         |Circuit 2: SHIFTER                         
+-------------------------------------------|-------------------------------------------
+and_0/B                                    |X0 **Mismatch**                            
+and_1/X                                    |Y0 **Mismatch**                            
+and_12/X                                   |Y7 **Mismatch**                            
+and_13/A                                   |X7 **Mismatch**                            
+VN                                         |VN                                         
+VP                                         |VP                                         
+or_0/A                                     |(no matching pin)                          
+or_3/A                                     |(no matching pin)                          
+or_2/A                                     |(no matching pin)                          
+or_4/A                                     |(no matching pin)                          
+or_4/B                                     |(no matching pin)                          
+and_8/A                                    |D **Mismatch**                             
+and_9/B                                    |D_N **Mismatch**                           
+and_2/B                                    |X1 **Mismatch**                            
+and_4/B                                    |X2 **Mismatch**                            
+and_9/A                                    |X5 **Mismatch**                            
+and_6/B                                    |X3 **Mismatch**                            
+and_8/B                                    |X4 **Mismatch**                            
+and_12/B                                   |X6 **Mismatch**                            
+or_0/X                                     |Y1 **Mismatch**                            
+X                                          |Y2 **Mismatch**                            
+or_3/X                                     |Y5 **Mismatch**                            
+or_1/X                                     |Y3 **Mismatch**                            
+or_2/X                                     |Y4 **Mismatch**                            
+or_4/X                                     |Y6 **Mismatch**                            
+or_3/A                                     |(no matching pin)                          
+or_4/B                                     |(no matching pin)                          
+or_2/A                                     |(no matching pin)                          
+or_4/A                                     |(no matching pin)                          
+or_0/A                                     |(no matching pin)                          
+---------------------------------------------------------------------------------------
+Cell pin lists for shifter and SHIFTER altered to match.
+Device classes shifter and SHIFTER are equivalent.
+  Flattening non-matched subcircuits shifter SHIFTER
+Flattening unmatched subcell fa_8bit in circuit fir_magic.spice (0)(8 instances)
+Flattening unmatched subcell FA_8bits in circuit fir_xschem.spice (1)(8 instances)
+
+Subcircuit summary:
+Circuit 1: fir_magic.spice                 |Circuit 2: fir_xschem.spice                
+-------------------------------------------|-------------------------------------------
+and (252)                                  |AND (252)                                  
+sky130_fd_pr__nfet_01v8 (324)              |sky130_fd_pr__nfet_01v8 (324)              
+sky130_fd_pr__pfet_01v8 (324)              |sky130_fd_pr__pfet_01v8 (324)              
+fa (64)                                    |FA (64)                                    
+Number of devices: 964                     |Number of devices: 964                     
+Number of nets: 732                        |Number of nets: 732                        
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+Cells have no pins;  pin matching not needed.
+Device classes fir_magic.spice and fir_xschem.spice are equivalent.
+
+Final result: Circuits match uniquely.
+

@@ -1,0 +1,240 @@
+* NGSPICE file created from fir.ext - technology: sky130A
+
+.subckt and A B X VP VN
+X0 a_15_n5# B a_15_n300# VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X1 X a_15_n5# VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=1.5e+12p ps=9e+06u w=1e+06u l=150000u
+X2 a_15_n5# A VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+X3 a_15_n300# A VN VN sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=1e+12p ps=6e+06u w=1e+06u l=150000u
+X4 X a_15_n5# VN VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+X5 VP B a_15_n5# VP sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+.ends
+
+.subckt or A B X VP VN
+X0 VN B a_15_n300# VN sky130_fd_pr__nfet_01v8 ad=1.5e+12p pd=9e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X1 X a_15_n300# VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=1e+12p ps=6e+06u w=1e+06u l=150000u
+X2 a_15_n5# A VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+X3 a_15_n300# A VN VN sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X4 X a_15_n300# VN VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+X5 a_15_n300# B a_15_n5# VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+.ends
+
+.subckt shifter X or_2/X or_4/X and_13/A or_3/A and_0/B or_1/X and_12/X and_1/X or_3/X
++ or_4/B and_9/A and_4/B and_12/B and_6/B or_2/A or_4/A or_0/A VP VN and_8/B or_0/X
++ and_9/B and_8/A and_2/B
+Xand_5 and_6/B and_9/B and_5/X VP VN and
+Xand_6 and_8/A and_6/B or_2/A VP VN and
+Xand_7 and_8/B and_9/B or_1/B VP VN and
+Xand_8 and_8/A and_8/B or_3/A VP VN and
+Xand_9 and_9/A and_9/B or_2/B VP VN and
+Xor_0 or_0/A or_0/B or_0/X VP VN or
+Xor_1 or_1/A or_1/B or_1/X VP VN or
+Xor_2 or_2/A or_2/B or_2/X VP VN or
+Xor_3 or_3/A or_3/B or_3/X VP VN or
+Xor_4 or_4/A or_4/B or_4/X VP VN or
+Xand_10 and_8/A and_9/A or_4/A VP VN and
+Xand_11 and_12/B and_9/B or_3/B VP VN and
+Xand_12 and_8/A and_12/B and_12/X VP VN and
+Xand_13 and_13/A and_9/B or_4/B VP VN and
+Xand_0 and_8/A and_0/B or_0/A VP VN and
+Xand_1 and_2/B and_9/B and_1/X VP VN and
+Xand_2 and_8/A and_2/B and_2/X VP VN and
+Xand_3 and_4/B and_9/B or_0/B VP VN and
+Xand_4 and_8/A and_4/B or_1/A VP VN and
+X0 a_755_n1730# and_2/X VN VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=2.3e+13p ps=1.38e+08u w=1e+06u l=150000u
+X1 a_755_n1730# and_5/X a_755_n1435# VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X2 X a_755_n1730# VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=2.7e+13p ps=1.62e+08u w=1e+06u l=150000u
+X3 VN and_5/X a_755_n1730# VN sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X4 X a_755_n1730# VN VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+X5 a_755_n1435# and_2/X VP VP sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+.ends
+
+.subckt invertor A Y VP VN
+X0 Y A VN VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X1 Y A VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+.ends
+
+.subckt xor_ and_1/B or_0/VP SUB and_0/A or_0/X
+Xor_0 or_0/A or_0/B or_0/X or_0/VP SUB or
+Xinvertor_0 and_0/A and_1/A or_0/VP SUB invertor
+Xinvertor_1 and_1/B and_0/B or_0/VP SUB invertor
+Xand_0 and_0/A and_0/B or_0/B or_0/VP SUB and
+Xand_1 and_1/A and_1/B or_0/A or_0/VP SUB and
+.ends
+
+.subckt fa xor__1/or_0/X and_0/B and_1/B or_0/VP SUB or_0/X and_1/A
+Xor_0 or_0/A or_0/B or_0/X or_0/VP SUB or
+Xxor__0 and_1/A or_0/VP SUB and_1/B and_0/A xor_
+Xxor__1 and_0/A or_0/VP SUB and_0/B xor__1/or_0/X xor_
+Xand_0 and_0/A and_0/B or_0/A or_0/VP SUB and
+Xand_1 and_1/A and_1/B or_0/B or_0/VP SUB and
+.ends
+
+.subckt fa_8bit fa_3/xor__1/or_0/X fa_5/and_1/B fa_6/xor__1/or_0/X fa_4/and_1/B fa_1/xor__1/or_0/X
++ fa_4/xor__1/or_0/X fa_1/and_1/A fa_7/xor__1/or_0/X fa_0/and_1/B fa_2/and_1/A fa_5/and_1/A
++ fa_2/xor__1/or_0/X fa_2/and_1/B fa_6/and_1/A fa_0/and_1/A fa_5/xor__1/or_0/X fa_7/and_1/B
++ fa_3/and_1/B fa_0/and_0/B fa_1/and_1/B fa_4/and_1/A fa_3/and_1/A fa_0/xor__1/or_0/X
++ fa_7/and_1/A SUB fa_6/and_1/B fa_7/or_0/VP
+Xfa_0 fa_0/xor__1/or_0/X fa_0/and_0/B fa_0/and_1/B fa_7/or_0/VP SUB fa_0/or_0/X fa_0/and_1/A
++ fa
+Xfa_1 fa_1/xor__1/or_0/X fa_0/or_0/X fa_1/and_1/B fa_7/or_0/VP SUB fa_1/or_0/X fa_1/and_1/A
++ fa
+Xfa_2 fa_2/xor__1/or_0/X fa_1/or_0/X fa_2/and_1/B fa_7/or_0/VP SUB fa_2/or_0/X fa_2/and_1/A
++ fa
+Xfa_3 fa_3/xor__1/or_0/X fa_2/or_0/X fa_3/and_1/B fa_7/or_0/VP SUB fa_3/or_0/X fa_3/and_1/A
++ fa
+Xfa_4 fa_4/xor__1/or_0/X fa_3/or_0/X fa_4/and_1/B fa_7/or_0/VP SUB fa_4/or_0/X fa_4/and_1/A
++ fa
+Xfa_5 fa_5/xor__1/or_0/X fa_4/or_0/X fa_5/and_1/B fa_7/or_0/VP SUB fa_5/or_0/X fa_5/and_1/A
++ fa
+Xfa_6 fa_6/xor__1/or_0/X fa_5/or_0/X fa_6/and_1/B fa_7/or_0/VP SUB fa_6/or_0/X fa_6/and_1/A
++ fa
+Xfa_7 fa_7/xor__1/or_0/X fa_6/or_0/X fa_7/and_1/B fa_7/or_0/VP SUB fa_7/or_0/X fa_7/and_1/A
++ fa
+.ends
+
+**.subckt fir
+Xshifter_10 shifter_10/X shifter_9/and_8/B shifter_10/or_4/X shifter_11/and_12/X shifter_10/or_3/A
++ shifter_11/and_1/X shifter_9/and_6/B shifter_9/and_13/A shifter_9/and_0/B shifter_9/and_9/A
++ shifter_10/or_4/B shifter_11/or_3/X shifter_11/X shifter_11/or_4/X shifter_11/or_1/X
++ shifter_10/or_2/A shifter_10/or_4/A shifter_10/or_0/A shifter_9/VP SUB shifter_11/or_2/X
++ shifter_9/and_2/B shifter_9/and_9/B shifter_9/and_8/A shifter_11/or_0/X shifter
+Xshifter_1 shifter_1/X shifter_1/or_2/X shifter_1/or_4/X shifter_1/and_13/A shifter_1/or_3/A
++ shifter_1/and_0/B shifter_1/or_1/X shifter_2/and_13/A shifter_2/and_0/B shifter_1/or_3/X
++ shifter_1/or_4/B shifter_0/or_3/X shifter_0/X shifter_0/or_4/X shifter_0/or_1/X
++ shifter_1/or_2/A shifter_1/or_4/A shifter_1/or_0/A shifter_9/VP SUB shifter_0/or_2/X
++ shifter_1/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_0/or_0/X shifter
+Xshifter_0 shifter_0/X shifter_0/or_2/X shifter_0/or_4/X shifter_0/and_13/A shifter_0/or_3/A
++ shifter_0/and_0/B shifter_0/or_1/X shifter_1/and_13/A shifter_1/and_0/B shifter_0/or_3/X
++ shifter_0/or_4/B shifter_0/and_9/A shifter_0/and_4/B shifter_0/and_12/B shifter_0/and_6/B
++ shifter_0/or_2/A shifter_0/or_4/A shifter_0/or_0/A shifter_9/VP SUB shifter_0/and_8/B
++ shifter_0/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_0/and_2/B shifter
+Xshifter_12 shifter_12/X shifter_12/or_2/X shifter_12/or_4/X shifter_13/and_12/X shifter_12/or_3/A
++ shifter_13/and_1/X shifter_12/or_1/X shifter_12/and_12/X shifter_12/and_1/X shifter_12/or_3/X
++ shifter_12/or_4/B shifter_13/or_3/X shifter_13/X shifter_13/or_4/X shifter_13/or_1/X
++ shifter_12/or_2/A shifter_12/or_4/A shifter_12/or_0/A shifter_9/VP SUB shifter_13/or_2/X
++ shifter_12/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_13/or_0/X shifter
+Xshifter_11 shifter_11/X shifter_11/or_2/X shifter_11/or_4/X shifter_11/and_13/A shifter_11/or_3/A
++ shifter_11/and_0/B shifter_11/or_1/X shifter_11/and_12/X shifter_11/and_1/X shifter_11/or_3/X
++ shifter_11/or_4/B shifter_11/and_9/A shifter_11/and_4/B shifter_11/and_12/B shifter_11/and_6/B
++ shifter_11/or_2/A shifter_11/or_4/A shifter_11/or_0/A shifter_9/VP SUB shifter_11/and_8/B
++ shifter_11/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_11/and_2/B shifter
+Xshifter_2 shifter_2/X shifter_2/or_2/X shifter_2/or_4/X shifter_2/and_13/A shifter_2/or_3/A
++ shifter_2/and_0/B shifter_2/or_1/X shifter_3/and_13/A shifter_3/and_0/B shifter_2/or_3/X
++ shifter_2/or_4/B shifter_1/or_3/X shifter_1/X shifter_1/or_4/X shifter_1/or_1/X
++ shifter_2/or_2/A shifter_2/or_4/A shifter_2/or_0/A shifter_9/VP SUB shifter_1/or_2/X
++ shifter_2/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_1/or_0/X shifter
+Xshifter_13 shifter_13/X shifter_13/or_2/X shifter_13/or_4/X shifter_14/and_12/X shifter_13/or_3/A
++ shifter_14/and_1/X shifter_13/or_1/X shifter_13/and_12/X shifter_13/and_1/X shifter_13/or_3/X
++ shifter_13/or_4/B shifter_14/or_3/X shifter_14/X shifter_14/or_4/X shifter_14/or_1/X
++ shifter_13/or_2/A shifter_13/or_4/A shifter_13/or_0/A shifter_9/VP SUB shifter_14/or_2/X
++ shifter_13/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_14/or_0/X shifter
+Xshifter_3 shifter_3/X shifter_3/or_2/X shifter_3/or_4/X shifter_3/and_13/A shifter_3/or_3/A
++ shifter_3/and_0/B shifter_3/or_1/X shifter_4/and_13/A shifter_4/and_0/B shifter_3/or_3/X
++ shifter_3/or_4/B shifter_2/or_3/X shifter_2/X shifter_2/or_4/X shifter_2/or_1/X
++ shifter_3/or_2/A shifter_3/or_4/A shifter_3/or_0/A shifter_9/VP SUB shifter_2/or_2/X
++ shifter_3/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_2/or_0/X shifter
+Xshifter_14 shifter_14/X shifter_14/or_2/X shifter_14/or_4/X shifter_15/and_12/X shifter_14/or_3/A
++ shifter_15/and_1/X shifter_14/or_1/X shifter_14/and_12/X shifter_14/and_1/X shifter_14/or_3/X
++ shifter_14/or_4/B shifter_15/or_3/X shifter_15/X shifter_15/or_4/X shifter_15/or_1/X
++ shifter_14/or_2/A shifter_14/or_4/A shifter_14/or_0/A shifter_9/VP SUB shifter_15/or_2/X
++ shifter_14/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_15/or_0/X shifter
+Xshifter_4 shifter_4/X shifter_4/or_2/X shifter_4/or_4/X shifter_4/and_13/A shifter_4/or_3/A
++ shifter_4/and_0/B shifter_4/or_1/X shifter_6/and_13/A shifter_6/and_0/B shifter_4/or_3/X
++ shifter_4/or_4/B shifter_3/or_3/X shifter_3/X shifter_3/or_4/X shifter_3/or_1/X
++ shifter_4/or_2/A shifter_4/or_4/A shifter_4/or_0/A shifter_9/VP SUB shifter_3/or_2/X
++ shifter_4/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_3/or_0/X shifter
+Xshifter_15 shifter_15/X shifter_15/or_2/X shifter_15/or_4/X shifter_16/and_12/X shifter_15/or_3/A
++ shifter_16/and_1/X shifter_15/or_1/X shifter_15/and_12/X shifter_15/and_1/X shifter_15/or_3/X
++ shifter_15/or_4/B shifter_16/or_3/X shifter_16/X shifter_16/or_4/X shifter_16/or_1/X
++ shifter_15/or_2/A shifter_15/or_4/A shifter_15/or_0/A shifter_9/VP SUB shifter_16/or_2/X
++ shifter_15/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_16/or_0/X shifter
+Xshifter_5 shifter_5/X shifter_5/or_2/X shifter_5/or_4/X shifter_7/and_12/X shifter_5/or_3/A
++ shifter_7/and_1/X shifter_5/or_1/X shifter_5/and_12/X shifter_5/and_1/X shifter_5/or_3/X
++ shifter_5/or_4/B shifter_7/or_3/X shifter_7/X shifter_7/or_4/X shifter_7/or_1/X
++ shifter_5/or_2/A shifter_5/or_4/A shifter_5/or_0/A shifter_9/VP SUB shifter_7/or_2/X
++ shifter_5/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_7/or_0/X shifter
+Xshifter_16 shifter_16/X shifter_16/or_2/X shifter_16/or_4/X shifter_17/and_12/X shifter_16/or_3/A
++ shifter_17/and_1/X shifter_16/or_1/X shifter_16/and_12/X shifter_16/and_1/X shifter_16/or_3/X
++ shifter_16/or_4/B shifter_17/or_3/X shifter_17/X shifter_17/or_4/X shifter_17/or_1/X
++ shifter_16/or_2/A shifter_16/or_4/A shifter_16/or_0/A shifter_9/VP SUB shifter_17/or_2/X
++ shifter_16/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_17/or_0/X shifter
+Xshifter_6 shifter_6/X shifter_6/or_2/X shifter_6/or_4/X shifter_6/and_13/A shifter_6/or_3/A
++ shifter_6/and_0/B shifter_6/or_1/X shifter_6/and_12/X shifter_6/and_1/X shifter_6/or_3/X
++ shifter_6/or_4/B shifter_4/or_3/X shifter_4/X shifter_4/or_4/X shifter_4/or_1/X
++ shifter_6/or_2/A shifter_6/or_4/A shifter_6/or_0/A shifter_9/VP SUB shifter_4/or_2/X
++ shifter_6/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_4/or_0/X shifter
+Xshifter_17 shifter_17/X shifter_17/or_2/X shifter_17/or_4/X shifter_17/and_13/A shifter_17/or_3/A
++ shifter_17/and_0/B shifter_17/or_1/X shifter_17/and_12/X shifter_17/and_1/X shifter_17/or_3/X
++ shifter_17/or_4/B shifter_17/and_9/A shifter_17/and_4/B shifter_17/and_12/B shifter_17/and_6/B
++ shifter_17/or_2/A shifter_17/or_4/A shifter_17/or_0/A shifter_9/VP SUB shifter_17/and_8/B
++ shifter_17/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_17/and_2/B shifter
+Xshifter_7 shifter_7/X shifter_7/or_2/X shifter_7/or_4/X shifter_8/and_12/X shifter_7/or_3/A
++ shifter_8/and_1/X shifter_7/or_1/X shifter_7/and_12/X shifter_7/and_1/X shifter_7/or_3/X
++ shifter_7/or_4/B shifter_8/or_3/X shifter_8/X shifter_8/or_4/X shifter_8/or_1/X
++ shifter_7/or_2/A shifter_7/or_4/A shifter_7/or_0/A shifter_9/VP SUB shifter_8/or_2/X
++ shifter_7/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_8/or_0/X shifter
+Xshifter_8 shifter_8/X shifter_8/or_2/X shifter_8/or_4/X shifter_9/and_12/X shifter_8/or_3/A
++ shifter_9/and_1/X shifter_8/or_1/X shifter_8/and_12/X shifter_8/and_1/X shifter_8/or_3/X
++ shifter_8/or_4/B shifter_9/or_3/X shifter_9/X shifter_9/or_4/X shifter_9/or_1/X
++ shifter_8/or_2/A shifter_8/or_4/A shifter_8/or_0/A shifter_9/VP SUB shifter_9/or_2/X
++ shifter_8/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_9/or_0/X shifter
+Xshifter_9 shifter_9/X shifter_9/or_2/X shifter_9/or_4/X shifter_9/and_13/A shifter_9/or_3/A
++ shifter_9/and_0/B shifter_9/or_1/X shifter_9/and_12/X shifter_9/and_1/X shifter_9/or_3/X
++ shifter_9/or_4/B shifter_9/and_9/A shifter_10/X shifter_10/or_4/X shifter_9/and_6/B
++ shifter_9/or_2/A shifter_9/or_4/A shifter_9/or_0/A shifter_9/VP SUB shifter_9/and_8/B
++ shifter_9/or_0/X shifter_9/and_9/B shifter_9/and_8/A shifter_9/and_2/B shifter
+Xfa_8bit_0 fa_8bit_7/fa_3/and_1/B fa_8bit_0/fa_5/and_1/B fa_8bit_7/fa_6/and_1/B fa_8bit_0/fa_4/and_1/B
++ fa_8bit_7/fa_1/and_1/B fa_8bit_7/fa_4/and_1/B fa_8bit_0/fa_1/and_1/A fa_8bit_7/fa_7/and_1/B
++ fa_8bit_0/fa_0/and_1/B fa_8bit_0/fa_2/and_1/A fa_8bit_0/fa_5/and_1/A fa_8bit_7/fa_2/and_1/B
++ fa_8bit_0/fa_2/and_1/B fa_8bit_0/fa_6/and_1/A fa_8bit_0/fa_0/and_1/A fa_8bit_7/fa_5/and_1/B
++ fa_8bit_0/fa_7/and_1/B fa_8bit_0/fa_3/and_1/B SUB fa_8bit_0/fa_1/and_1/B fa_8bit_0/fa_4/and_1/A
++ fa_8bit_0/fa_3/and_1/A fa_8bit_7/fa_0/and_1/B fa_8bit_0/fa_7/and_1/A SUB fa_8bit_0/fa_6/and_1/B
++ shifter_9/VP fa_8bit
+Xfa_8bit_1 fa_8bit_0/fa_3/and_1/A fa_8bit_1/fa_5/and_1/B fa_8bit_0/fa_6/and_1/A fa_8bit_1/fa_4/and_1/B
++ fa_8bit_0/fa_1/and_1/A fa_8bit_0/fa_4/and_1/A shifter_1/or_0/X fa_8bit_0/fa_7/and_1/A
++ fa_8bit_1/fa_0/and_1/B shifter_1/X shifter_1/or_3/X fa_8bit_0/fa_2/and_1/A fa_8bit_1/fa_2/and_1/B
++ shifter_1/or_4/X shifter_2/and_0/B fa_8bit_0/fa_5/and_1/A fa_8bit_1/fa_7/and_1/B
++ fa_8bit_1/fa_3/and_1/B SUB fa_8bit_1/fa_1/and_1/B shifter_1/or_2/X shifter_1/or_1/X
++ fa_8bit_0/fa_0/and_1/A shifter_2/and_13/A SUB fa_8bit_1/fa_6/and_1/B shifter_9/VP
++ fa_8bit
+Xfa_8bit_2 fa_8bit_1/fa_3/and_1/B shifter_6/or_3/X fa_8bit_1/fa_6/and_1/B shifter_6/or_2/X
++ fa_8bit_1/fa_1/and_1/B fa_8bit_1/fa_4/and_1/B shifter_4/or_0/X fa_8bit_1/fa_7/and_1/B
++ shifter_6/and_1/X shifter_4/X shifter_4/or_3/X fa_8bit_1/fa_2/and_1/B shifter_6/X
++ shifter_4/or_4/X shifter_6/and_0/B fa_8bit_1/fa_5/and_1/B shifter_6/and_12/X shifter_6/or_1/X
++ SUB shifter_6/or_0/X shifter_4/or_2/X shifter_4/or_1/X fa_8bit_1/fa_0/and_1/B shifter_6/and_13/A
++ SUB shifter_6/or_4/X shifter_9/VP fa_8bit
+Xfa_8bit_3 fa_8bit_6/fa_3/and_1/B shifter_5/or_3/X fa_8bit_6/fa_6/and_1/B shifter_5/or_2/X
++ fa_8bit_6/fa_1/and_1/B fa_8bit_6/fa_4/and_1/B shifter_8/or_0/X fa_8bit_6/fa_7/and_1/B
++ shifter_5/and_1/X shifter_8/X shifter_8/or_3/X fa_8bit_6/fa_2/and_1/B shifter_5/X
++ shifter_8/or_4/X shifter_8/and_1/X fa_8bit_6/fa_5/and_1/B shifter_5/and_12/X shifter_5/or_1/X
++ SUB shifter_5/or_0/X shifter_8/or_2/X shifter_8/or_1/X fa_8bit_6/fa_0/and_1/B shifter_8/and_12/X
++ SUB shifter_5/or_4/X shifter_9/VP fa_8bit
+Xfa_8bit_5 fa_8bit_4/fa_3/and_1/B shifter_12/or_3/X fa_8bit_4/fa_6/and_1/B shifter_12/or_2/X
++ fa_8bit_4/fa_1/and_1/B fa_8bit_4/fa_4/and_1/B shifter_13/or_0/X fa_8bit_4/fa_7/and_1/B
++ shifter_12/and_1/X shifter_13/X shifter_13/or_3/X fa_8bit_4/fa_2/and_1/B shifter_12/X
++ shifter_13/or_4/X shifter_13/and_1/X fa_8bit_4/fa_5/and_1/B shifter_12/and_12/X
++ shifter_12/or_1/X SUB shifter_12/or_0/X shifter_13/or_2/X shifter_13/or_1/X fa_8bit_4/fa_0/and_1/B
++ shifter_13/and_12/X SUB shifter_12/or_4/X shifter_9/VP fa_8bit
+Xfa_8bit_4 fa_8bit_7/fa_3/and_1/A fa_8bit_4/fa_5/and_1/B fa_8bit_7/fa_6/and_1/A fa_8bit_4/fa_4/and_1/B
++ fa_8bit_7/fa_1/and_1/A fa_8bit_7/fa_4/and_1/A shifter_16/or_0/X fa_8bit_7/fa_7/and_1/A
++ fa_8bit_4/fa_0/and_1/B shifter_16/X shifter_16/or_3/X fa_8bit_7/fa_2/and_1/A fa_8bit_4/fa_2/and_1/B
++ shifter_16/or_4/X shifter_16/and_1/X fa_8bit_7/fa_5/and_1/A fa_8bit_4/fa_7/and_1/B
++ fa_8bit_4/fa_3/and_1/B SUB fa_8bit_4/fa_1/and_1/B shifter_16/or_2/X shifter_16/or_1/X
++ fa_8bit_7/fa_0/and_1/A shifter_16/and_12/X SUB fa_8bit_4/fa_6/and_1/B shifter_9/VP
++ fa_8bit
+Xfa_8bit_6 fa_8bit_0/fa_3/and_1/B fa_8bit_6/fa_5/and_1/B fa_8bit_0/fa_6/and_1/B fa_8bit_6/fa_4/and_1/B
++ fa_8bit_0/fa_1/and_1/B fa_8bit_0/fa_4/and_1/B shifter_11/or_0/X fa_8bit_0/fa_7/and_1/B
++ fa_8bit_6/fa_0/and_1/B shifter_11/X shifter_11/or_3/X fa_8bit_0/fa_2/and_1/B fa_8bit_6/fa_2/and_1/B
++ shifter_11/or_4/X shifter_11/and_1/X fa_8bit_0/fa_5/and_1/B fa_8bit_6/fa_7/and_1/B
++ fa_8bit_6/fa_3/and_1/B SUB fa_8bit_6/fa_1/and_1/B shifter_11/or_2/X shifter_11/or_1/X
++ fa_8bit_0/fa_0/and_1/B shifter_11/and_12/X SUB fa_8bit_6/fa_6/and_1/B shifter_9/VP
++ fa_8bit
+Xfa_8bit_7 fa_8bit_7/fa_3/xor__1/or_0/X fa_8bit_7/fa_5/and_1/B fa_8bit_7/fa_6/xor__1/or_0/X
++ fa_8bit_7/fa_4/and_1/B fa_8bit_7/fa_1/xor__1/or_0/X fa_8bit_7/fa_4/xor__1/or_0/X
++ fa_8bit_7/fa_1/and_1/A fa_8bit_7/fa_7/xor__1/or_0/X fa_8bit_7/fa_0/and_1/B fa_8bit_7/fa_2/and_1/A
++ fa_8bit_7/fa_5/and_1/A fa_8bit_7/fa_2/xor__1/or_0/X fa_8bit_7/fa_2/and_1/B fa_8bit_7/fa_6/and_1/A
++ fa_8bit_7/fa_0/and_1/A fa_8bit_7/fa_5/xor__1/or_0/X fa_8bit_7/fa_7/and_1/B fa_8bit_7/fa_3/and_1/B
++ SUB fa_8bit_7/fa_1/and_1/B fa_8bit_7/fa_4/and_1/A fa_8bit_7/fa_3/and_1/A fa_8bit_7/fa_0/xor__1/or_0/X
++ fa_8bit_7/fa_7/and_1/A SUB fa_8bit_7/fa_6/and_1/B shifter_9/VP fa_8bit
+.ends
+

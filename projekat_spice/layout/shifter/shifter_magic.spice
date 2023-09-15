@@ -1,0 +1,48 @@
+* NGSPICE file created from shifter.ext - technology: sky130A
+
+.subckt and A B X VP VN
+X0 a_15_n5# B a_15_n300# VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X1 X a_15_n5# VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=1.5e+12p ps=9e+06u w=1e+06u l=150000u
+X2 a_15_n5# A VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+X3 a_15_n300# A VN VN sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=1e+12p ps=6e+06u w=1e+06u l=150000u
+X4 X a_15_n5# VN VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+X5 VP B a_15_n5# VP sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+.ends
+
+.subckt or A B X VP VN
+X0 VN B a_15_n300# VN sky130_fd_pr__nfet_01v8 ad=1.5e+12p pd=9e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X1 X a_15_n300# VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=1e+12p ps=6e+06u w=1e+06u l=150000u
+X2 a_15_n5# A VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+X3 a_15_n300# A VN VN sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X4 X a_15_n300# VN VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+X5 a_15_n300# B a_15_n5# VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+.ends
+
+**.subckt shifter X VP VN
+Xand_5 and_6/B and_9/B and_5/X VP VN and
+Xand_6 and_8/A and_6/B or_2/A VP VN and
+Xand_7 and_8/B and_9/B or_1/B VP VN and
+Xand_8 and_8/A and_8/B or_3/A VP VN and
+Xand_9 and_9/A and_9/B or_2/B VP VN and
+Xor_0 or_0/A or_0/B or_0/X VP VN or
+Xor_1 or_1/A or_1/B or_1/X VP VN or
+Xor_2 or_2/A or_2/B or_2/X VP VN or
+Xor_3 or_3/A or_3/B or_3/X VP VN or
+Xor_4 or_4/A or_4/B or_4/X VP VN or
+Xand_10 and_8/A and_9/A or_4/A VP VN and
+Xand_11 and_12/B and_9/B or_3/B VP VN and
+Xand_12 and_8/A and_12/B and_12/X VP VN and
+Xand_13 and_13/A and_9/B or_4/B VP VN and
+Xand_0 and_8/A and_0/B or_0/A VP VN and
+Xand_1 and_2/B and_9/B and_1/X VP VN and
+Xand_2 and_8/A and_2/B and_2/X VP VN and
+Xand_3 and_4/B and_9/B or_0/B VP VN and
+Xand_4 and_8/A and_4/B or_1/A VP VN and
+X0 a_755_n1730# and_2/X VN VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=2.3e+13p ps=1.38e+08u w=1e+06u l=150000u
+X1 a_755_n1730# and_5/X a_755_n1435# VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=5e+11p ps=3e+06u w=1e+06u l=150000u
+X2 X a_755_n1730# VP VP sky130_fd_pr__pfet_01v8 ad=5e+11p pd=3e+06u as=2.7e+13p ps=1.62e+08u w=1e+06u l=150000u
+X3 VN and_5/X a_755_n1730# VN sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+X4 X a_755_n1730# VN VN sky130_fd_pr__nfet_01v8 ad=5e+11p pd=3e+06u as=0p ps=0u w=1e+06u l=150000u
+X5 a_755_n1435# and_2/X VP VP sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=0p ps=0u w=1e+06u l=150000u
+.ends
+
